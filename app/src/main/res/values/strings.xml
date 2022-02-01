@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">homework1</string>
+    <string name="first_name">Имя</string>
+    <string name="secondName">Фамилия</string>
+    <string name="age">Возраст</string>
+    <string name="button_text">Узнай о себе</string>
+</resources>
