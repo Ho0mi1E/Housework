@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,10 +34,16 @@ class MainActivity : AppCompatActivity() {
                 showToast("Ошибка, есть незаполненые поля")
 2
             } else {
-                val user =
-                    User(firstName.text.toString(), secondName.text.toString(), age.text.toString().toInt())
+                try {
+                    val user =
+                        User(firstName.text.toString(), secondName.text.toString(), age.text.toString().toInt())
+                    textView.text = user.toString()
+                }catch (e: Exception){
+                    showToast("Неверные данные")
+                }
 
-                textView.text = user.toString()
+
+
 
 
             }
