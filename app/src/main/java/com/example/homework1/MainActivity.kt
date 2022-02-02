@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initView() {
         btn.setOnClickListener {
-            if (firstName.text.toString() == "" || secondName.text.toString() == "" || age.text.toString() == "") {
+            if (firstName.text.isEmpty() || secondName.text.isEmpty() || age.text.isEmpty()) {
                 showToast("Ошибка, есть незаполненые поля")
 
             } else {
