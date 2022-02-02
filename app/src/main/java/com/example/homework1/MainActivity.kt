@@ -27,29 +27,26 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun initView(){
+    private fun initView() {
         btn.setOnClickListener {
-            if (firstName.text.toString() == "" || secondName.text.toString() == "" || age.text.toString() == "")
-            {
+            if (firstName.text.toString() == "" || secondName.text.toString() == "" || age.text.toString() == "") {
                 showToast("Ошибка, есть незаполненые поля")
 
-            }
-            else{
-            val user = User(firstName.text.toString(),secondName.text.toString(),age.text.toString())
-            val text = "Тебя зовут " + user.userName + " " + user.secondName + ". Тебе " + user.age
-            textView.text = text
+            } else {
+                val user =
+                    User(firstName.text.toString(), secondName.text.toString(), age.text.toString())
 
+                textView.text = user.toString()
+
+
+            }
 
 
         }
-
-
-
-    }
     }
 
-    private fun showToast(message: String){
-        Toast.makeText(this,message, Toast.LENGTH_LONG).show()
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
 
     }
 
