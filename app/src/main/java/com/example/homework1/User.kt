@@ -1,5 +1,7 @@
 package com.example.homework1
 
-data class User(val userName: String, val secondName: String, val age: String) {
+import android.text.Editable
+
+data class User(val userName: String, val secondName: String, val age: Int) {
 
 }

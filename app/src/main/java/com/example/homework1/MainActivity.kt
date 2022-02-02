@@ -31,10 +31,10 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener {
             if (firstName.text.isEmpty() || secondName.text.isEmpty() || age.text.isEmpty()) {
                 showToast("Ошибка, есть незаполненые поля")
-
+2
             } else {
                 val user =
-                    User(firstName.text.toString(), secondName.text.toString(), age.text.toString())
+                    User(firstName.text.toString(), secondName.text.toString(), age.text.toString().toInt())
 
                 textView.text = user.toString()
 
